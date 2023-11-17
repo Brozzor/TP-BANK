@@ -9,12 +9,13 @@
   "dependencies": {
     "dotenv": "^16.3.1",
     "express": "^4.18.2",
+    "express-http-proxy": "^2.0.0",
     "jsonwebtoken": "^9.0.2",
     "mongoose": "^8.0.1",
     "nodemon": "^3.0.1"
   },
   "scripts": {
-    "dev": "nodemon app.js",
-    "start": "node app.js"
+    "dev": "nodemon api-gateway/index",
+    "start": "node api-gateway/index"
   }
 }

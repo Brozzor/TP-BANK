@@ -38,5 +38,22 @@ module.exports = {
             console.error(err);
             return res.sendStatus(500);
         }
+    },
+    send: async (req, res) => {
+        if (!req.body.amount) return res.status(400).json({ error: 'amount is required' });
+        const from = await Account.findOne(req.body.from);
+        if (!from) return res.status(404).json({ error: 'from account not found' });
+        if (from.customer !== req.customer.id) return res.sendStatus(403);
+        const to = await Account.findOne(req.body.to);
+        if (!to) return res.status(404).json({ error: 'to account not found' });
+        if (from.balance < req.body.amount) return res.status(400).json({ error: 'insufficient balance' });
+        try {
+            await Account.update(from.id, { balance: from.balance - req.body.amount });
+            await Account.update(to.id, { balance: to.balance + req.body.amount });
+            return res.sendStatus(200);
+        } catch (err) {
+            console.error(err);
+            return res.sendStatus(500);
+        }
     }
 }

@@ -22,6 +22,7 @@ module.exports.policies = {
 
     'CustomerController' : {
         '*': 'isAuth',
+        'create': true,
     },
 
 };

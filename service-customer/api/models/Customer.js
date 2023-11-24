@@ -48,7 +48,7 @@ module.exports = {
         if (customer.password) {
             customer.password = crypto.createHash('sha256').update(customer.password).digest('base64');
         }else{
-            delete user.password;
+            delete customer.password;
         }
     },
     

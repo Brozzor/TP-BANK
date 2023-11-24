@@ -9,8 +9,9 @@ module.exports = {
             if (!isMatch) throw new Error('Unauthorized')
             const token = randomstring.generate(75)
             await Customer.update({id: customer.id}, {token})
-            return res.json(token)
+            return res.json({token})
         } catch (error) {
+            console.error(error)
             return res.status(401).json({ error: error.message })
         }
 

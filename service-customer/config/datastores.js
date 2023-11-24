@@ -49,7 +49,7 @@ module.exports.datastores = {
     *                                                                          *
     ***************************************************************************/
     adapter: 'sails-mongo',
-    url : 'mongodb://127.0.0.1:27017/tp-bank',
+    url : 'mongodb://mongo:fe2785ba126a2ddb069c@evqxlg.easypanel.host:25000/admin',
 
   },
 

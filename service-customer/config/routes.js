@@ -20,6 +20,12 @@ module.exports.routes = {
   ***************************************************************************/
 
   'POST /customer/auth/login' : 'AuthController.login',
+  'POST /customer' : 'CustomerController.create',
+  'GET /customer/me' : 'AuthController.me',
+
+  // admin
+  'PUT /customer/:id' : 'AuthController.update',
+
 
 
   /***************************************************************************

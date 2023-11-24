@@ -9,7 +9,18 @@ Bienvenue dans le projet de développement de solution pour la gestion des opér
     - cd projet
     - npm install
 
+## Lancement
+
+npm run dev
+
 ## Routes
 
 /account : accès aux micros-service "service-account"
 /customer : accès aux micros-service "service-customer"
+
+
+## Réalisé par
+
+Maxime LECOUTURIER
+Romain BUISSON
+Victor AFFILE

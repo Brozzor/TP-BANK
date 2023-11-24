@@ -62,5 +62,5 @@ Toutes les APIs exposées sont sécurisées pour garantir la confidentialité de
 
 ## Auteurs
 - [Romain Buisson](https://buisson.us/)
-- [Maxime Lecouturier](https://portofolio.maximelecouturier.fr)
+- [Maxime Lecouturier](https://portfolio.maximelecouturier.fr)
 - [Victor Affile](https://github.com/VicAffile)

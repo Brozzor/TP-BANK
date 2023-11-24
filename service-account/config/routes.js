@@ -12,8 +12,8 @@ module.exports.routes = {
   'GET /account': 'AccountController.get',
   'POST /account': 'AccountController.create',
   'PUT /account/:id': 'AccountController.update',
-  'GET /account/:id': 'AccountController.detail'
-
+  'GET /account/:id': 'AccountController.detail',
+  'POST /account/send': 'AccountController.send'
 
   /***************************************************************************
   *                                                                          *

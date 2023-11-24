@@ -22,7 +22,8 @@ module.exports.policies = {
     'get': ['isAuth', 'isAdmin'],
     'create': ['isAuth', 'isAdmin'],
     'update': ['isAuth', 'isAdmin'],
-    'detail': ['isAuth']
+    'detail': ['isAuth'],
+    'send': ['isAuth']
   }
 
 };

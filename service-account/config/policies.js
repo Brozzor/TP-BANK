@@ -21,6 +21,7 @@ module.exports.policies = {
   'AccountController': {
     'get': ['isAuth', 'isAdmin'],
     'create': ['isAuth', 'isAdmin'],
+    'update': ['isAuth', 'isAdmin'],
     'detail': ['isAuth']
   }
 

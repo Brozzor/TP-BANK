@@ -10,10 +10,21 @@ module.exports = {
     },
     create: async (req, res) => {
         try {
-            await Account.create(req.body);
+            await Account.create({
+                customer: req.body.customer
+            });
             return res.sendStatus(201);
         } catch (err) {
-            console.err(err);
+            console.error(err);
+            return res.sendStatus(500);
+        }
+    },
+    update: async (req, res) => {
+        try {
+            await Account.update(req.params.id, req.body);
+            return res.sendStatus(200);
+        } catch (err) {
+            console.error(err);
             return res.sendStatus(500);
         }
     },

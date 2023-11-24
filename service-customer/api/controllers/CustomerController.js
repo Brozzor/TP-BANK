@@ -8,7 +8,13 @@ module.exports = {
         }
     },
     me : async (req, res) => {
-        return res.json(req.customer)
+        return res.json({
+            id: req.customer.id,
+            firstname: req.customer.firstname,
+            lastname: req.customer.lastname,
+            email: req.customer.email,
+            status: req.customer.status
+        })
     },
     // admin only
     update : async (req, res) => {

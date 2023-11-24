@@ -1,6 +1,7 @@
+const randomstring = require('randomstring');
 module.exports = {
     attributes: {
-        customerID: {
+        customer: {
             model: 'customer',
             required: true
         },
@@ -12,6 +13,18 @@ module.exports = {
             type: 'string',
             isIn: ['current', 'savings'],
             defaultsTo: 'current'
-        }
-    }
+        },
+        iban: {
+            type: 'string',
+            unique: true
+        },
+    },
+    beforeCreate: async (account, cb) => {
+        account.iban = "FR"+ randomstring.generate({
+            charset: ['numeric'],
+            length: 10,
+          })
+        cb();
+    },
+
 }
